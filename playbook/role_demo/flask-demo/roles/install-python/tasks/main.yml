@@ -1,3 +1,4 @@
+# you must place the main.yml at a folder named tasks
 - name: install Python on centos
   become: yes
   yum:

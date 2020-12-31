@@ -1,11 +1,12 @@
 ---
 - name: flask demo
   hosts: all
-
+  # roles:
+  #   - role: install_python
   tasks:
-    - include_role:
+    - import_role:
         name: install-python
-    - include_role:
+    - import_role:
         name: deploy-code
     - name: start flask app
       shell: nohup ~/flask-ansible-demo/.env/bin/python ~/flask-ansible-demo/wsgi.py&
